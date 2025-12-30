@@ -40,8 +40,8 @@ If I had more time, here is what I would add:
 * Student View: A separate login for students to check their own percentage.
 
 ## 👨‍💻 Author
-*Manglam Dandeva*
-*Raghav Satija*
-*Aditya Chitoria*
-*Ishant*
+*Manglam Dandeva*                                                                                                                                                                                                   
+*Raghav Satija*                                                                                                                                                                                                     
+*Aditya Chitoria*                                                                                                                                                                                                   
+*Ishant*                                                                                                                                                                                                            
 First Year, CSE Students IIIT Sonepat
