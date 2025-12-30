@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Courses</title>
+
+<style>
+:root {
+    --primary: #1f2937;
+    --accent: #4f46e5;
+    --light-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --text-muted: #6b7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--light-bg);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background-color: var(--card-bg);
+    padding: 20px 0;
+    border-right: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Navigation */
+.nav {
+    list-style: none;
+}
+
+.nav li {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav li img {
+    width: 20px;
+    height: 20px;
+}
+
+.nav span {
+    margin-left: 12px;
+    font-size: 15px;
+}
+
+.nav li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav li:hover {
+    background-color: #f9fafb;
+}
+
+.nav li.active {
+    background-color: #eef2ff;
+    border-left: 4px solid var(--accent);
+    font-weight: bold;
+}
+
+/* Main */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-left {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+}
+
+.header-right img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.header-right img:hover {
+    filter: brightness(0.5) sepia(1) hue-rotate(220deg);
+}
+
+/* Content */
+.content {
+    padding: 40px;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Courses List */
+.courses-list {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.course-row {
+    padding: 18px 25px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-row:last-child {
+    border-bottom: none;
+}
+
+.course-details h3 {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.course-details p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.course-meta {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: right;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<aside class="sidebar">
+    <div class="logo">
+        <img src="clock.png" alt="Logo">
+        ATTENDANCE
+    </div>
+
+    <ul class="nav">
+        <li>
+            <a href="mainpage.html">
+                <img src="dashboard.png" alt="Dashboard">
+                <span>DASHBOARD</span>
+            </a>
+        </li>
+        <li>
+            <a href="attendancepage.html">
+                <img src="attendance.png" alt="Attendance">
+                <span>ATTENDANCE</span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="courses.html">
+                <img src="courses.png" alt="Courses">
+                <span>COURSES</span>
+            </a>
+        </li>
+        <li>
+            <a href="reportpage.html">
+                <img src="report.png" alt="Report">
+                <span>REPORT</span>
+            </a>
+        </li>
+        <li>
+            <a href="settings.html">
+                <img src="settings.png" alt="Settings">
+                <span>SETTINGS</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+
+<!-- Main -->
+<main class="main">
+
+<header class="header">
+    <div class="header-left">Courses</div>
+    <div class="header-right">
+        <img src="mail.webp" alt="Mail">
+        <img src="profile.png" alt="Profile">
+    </div>
+</header>
+
+<section class="content">
+    <div class="page-title">Available Courses</div>
+    <div class="page-subtitle">Manage and view all active courses</div>
+
+    <div class="courses-list">
+
+        <div class="course-row">
+            <div class="course-details">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript fundamentals</p>
+            </div>
+            <div class="course-meta">
+                <div>Students: 120</div>
+                <div>Status: Active</div>
+            </div>
+        </div>
+
+        <div class="course-row">
+            <div class="course-details">
+                <h3>UI / UX Design</h3>
+                <p>User interface and experience design</p>
+            </div>
+            <div class="course-meta">
+                <div>Students: 80</div>
+                <div>Status: Active</div>
+            </div>
+        </div>
+
+        <div class="course-row">
+            <div class="course-details">
+                <h3>Data Science</h3>
+                <p>Python, data analysis & visualization</p>
+            </div>
+            <div class="course-meta">
+                <div>Students: 60</div>
+                <div>Status: Active</div>
+            </div>
+        </div>
+
+        <div class="course-row">
+            <div class="course-details">
+                <h3>Cyber Security</h3>
+                <p>Network & application security basics</p>
+            </div>
+            <div class="course-meta">
+                <div>Students: 40</div>
+                <div>Status: Active</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+</body>
+</html>
